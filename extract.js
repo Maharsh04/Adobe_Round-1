@@ -4,9 +4,11 @@ const AdmZip = require('adm-zip');
 const { pdfServicesRegionURI } = require('@adobe/pdfservices-node-sdk/src/internal/config/dc-services-default-config');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-const OUTPUT_ZIP = './ExtractTextInfoFromPDF.zip';
+
 const OUTPUT_CSV = './ExtractedData.csv';
 const INPUT_PDF = './resource/Output0.pdf';
+const OUTPUT_ZIP = './ExtractTextInfoFromPDF.zip';
+
 
 const credentials = PDFServicesSdk.Credentials
     .serviceAccountCredentialsBuilder()
