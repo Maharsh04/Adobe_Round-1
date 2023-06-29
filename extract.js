@@ -590,7 +590,7 @@ extractPDFOperation.execute(executionContext)
             end = st.indexOf("\n");
             st = st.substring(end + 1);
         
-            let productdetails
+            let productdetails=[];
             //For each product
             while (st.length > 0) {
                 let temp={
@@ -600,17 +600,17 @@ extractPDFOperation.execute(executionContext)
                 }
                 end = st.indexOf("\n");
                 let product_name = st.slice(0, end);        //Product_Name
-                product_name = product_name.trim();
+                temp.name = product_name.trim();
                 st = st.substr(end + 1);
         
                 end = st.indexOf("\n");
                 let product_qty = st.slice(0, end);         //Product_quantity
-                product_qty = product_qty.trim();
+                temp.qty = product_qty.trim();
                 st = st.substr(end + 1);
         
                 end = st.indexOf("\n");
                 let product_rate = st.slice(0, end);        //Product_rate
-                product_rate = product_rate.trim();
+                temp.rate = product_rate.trim();
                 st = st.substr(end + 1);
                 end = st.indexOf("\n");
         
