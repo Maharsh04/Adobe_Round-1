@@ -1,5 +1,5 @@
 # Adobe_Round-1 Submission
-First initialise required node_modules by typing `npm init`
+First initialise required node_modules by typing `npm install`
 To run the code `node extract`
 This commant will create a new extractedData.csv file containing 
 the required information extract using Adobe Extract API
